@@ -1,0 +1,115 @@
+.container {
+	font-size: 16px;
+	overflow: hidden;
+	color: #fff;
+	height: 100vh;
+	width: 100%;
+	background-color: #000;
+	cursor: url("../images/mouse.png"), auto;
+}
+
+.menu-img {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+}
+
+.menu-title {
+	margin: 0;
+	font-family: Beckett, Verdana;
+    font-weight: 400;
+    font-style: normal;
+	font-size: 4.5rem;
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	color: rgb(172, 203, 241);
+}
+
+.menu-subtitle {
+	font-family: Futura, Arial, Helvetica, sans-serif;
+	position: absolute;
+	top: 160px;
+	left: 90px;
+	letter-spacing: 1px;
+	font-size: 1.5em;
+	color:rgb(74, 90, 107);
+}
+
+.menu-container {
+	width: 100%;
+	list-style: none;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.menu-container--left, .menu-container--game {
+	width: 50%;
+}
+
+.menu-container--game {
+	display: block;
+	position: relative;
+	top: 190px;
+	left: 400px;
+}
+
+.menu-option {
+	align-self: center;
+	margin: 15px;
+	color: rgb(74, 90, 107);
+	transform: scale(2,1);
+	font-size: 24px;
+	font-family: BankGothic;
+	position: relative;
+	text-transform: uppercase;
+}
+
+.menu-option > a {
+	text-decoration: none;	
+	color: rgb(74, 90, 107);
+	cursor: url("../images/mouse.png"), auto;
+}
+
+.menu-option > a:hover {
+	color: rgb(152, 179, 213);
+}
+
+.menu-option > a:hover::before {
+	position: absolute;
+	content: "";
+	left: -30px;
+	width: 90px;
+	height: 90px;
+	background-size: 24px 80px;
+	background-repeat: no-repeat;
+	background-image: url('../images/arrow.png');
+}
+
+.menu-option--back {
+	bottom: 40px;
+	right: 80px;
+	position: absolute;
+}
+
+.menu-option--left {
+	display: block;
+	margin: 15px;
+}
+
+.menu-option--list {
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	margin: 2px 15px;
+	transform: scale(1, 1);
+}
+
+.menu-option--list > a:hover::before {
+	left: -450px;
+	background-size: 42px 80px;
+}
+
+.menu-option--lang {
+	margin: 10px 15px;
+}
