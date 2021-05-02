@@ -162,8 +162,12 @@
 }
 
 .menu-option--datagame-blank {
-	display: inline-flex;
-	justify-content: center;
+	text-align: center;
+}
+
+.menu-option--datagame-blank > a {
+	width: 100%;
+	display: block;
 }
 
 .menu-option--language {
