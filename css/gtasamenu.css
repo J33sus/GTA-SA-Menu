@@ -166,12 +166,6 @@
 	justify-content: center;
 }
 
-
-.menu-option--list > a:hover::before {
-	left: -450px;
-	background-size: 42px 80px;
-}
-
 .menu-option--language {
 	margin: 10px 15px;
 }
