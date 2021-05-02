@@ -2,41 +2,70 @@
 	font-size: 16px;
 	overflow: hidden;
 	color: #fff;
-	height: 100vh;
-	width: 100%;
 	background-color: #000;
 	cursor: url("../images/mouse.png"), auto;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: 0.8fr 1.6fr 0.6fr;
+	
+	grid-template-areas: "header header header"
+						"content content content"
+						"footer footer footer";
 }
 
-.menu-img {
+/* Splash Background */
+.menu-image {
 	position: absolute;
 	top: 0px;
 	right: 0px;
+	width: 512px;
+	height: 512px;
+	background-repeat: no-repeat;
 }
 
+/* My CSS Grid Classes */
+.menu-header {
+    grid-area: header;
+    height: 100%;
+    display: flex;
+	justify-content: center;
+    flex-direction: column;
+}
+
+.menu-content {
+	grid-area: content;
+}
+
+.menu-footer {
+	grid-area: footer;
+}
+
+/* Header */
 .menu-title {
+	width: fit-content;
+	padding-left: 3rem;
 	margin: 0;
 	font-family: Beckett, Verdana;
     font-weight: 400;
     font-style: normal;
 	font-size: 4.5rem;
-	position: absolute;
-	top: 60px;
-	left: 60px;
 	color: rgb(172, 203, 241);
 }
 
 .menu-subtitle {
+	padding-left: 6rem;
 	font-family: Futura, Arial, Helvetica, sans-serif;
-	position: absolute;
-	top: 160px;
-	left: 90px;
 	letter-spacing: 1px;
 	font-size: 1.5em;
 	color:rgb(74, 90, 107);
 }
 
+/* Menu container and childs */
 .menu-container {
+	margin: 0px;
+	padding: 0px;
 	width: 100%;
 	list-style: none;
 	height: 100%;
@@ -45,15 +74,19 @@
 	justify-content: center;
 }
 
-.menu-container--left, .menu-container--game {
-	width: 50%;
+/* Menu container fixes */
+.menu-container--game {
+	padding-left: 100px;
+	justify-content: flex-start;
 }
 
-.menu-container--game {
-	display: block;
-	position: relative;
-	top: 190px;
-	left: 400px;
+.menu-container--options {
+	width: 50%;
+	height: 80%;
+}
+
+.menu-container--language {
+	justify-content: flex-start;
 }
 
 .menu-option {
@@ -68,6 +101,7 @@
 }
 
 .menu-option > a {
+	width: fit-content;
 	text-decoration: none;	
 	color: rgb(74, 90, 107);
 	cursor: url("../images/mouse.png"), auto;
@@ -83,9 +117,23 @@
 	left: -30px;
 	width: 90px;
 	height: 90px;
-	background-size: 24px 80px;
+	background-size: 24px 60px;
 	background-repeat: no-repeat;
 	background-image: url('../images/arrow.png');
+}
+
+/* Menu option fixes */
+.menu-option--game {
+	align-self: flex-start;
+	transform: scale(1, 1);
+	font-size: 36px;
+	letter-spacing: 1.5px;
+	margin: 8px 15px;
+}
+
+.menu-option--game > a:hover::before {
+	left: -40px;
+	background-size: 36px 70px;
 }
 
 .menu-option--back {
@@ -94,22 +142,45 @@
 	position: absolute;
 }
 
-.menu-option--left {
-	display: block;
-	margin: 15px;
-}
-
-.menu-option--list {
+.menu-option--datagame {
+	width: 80%;
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 	margin: 2px 15px;
 	transform: scale(1, 1);
+	letter-spacing: 1.2px;
 }
+
+.menu-option--datagame-left {
+	width: 40%;
+	display: inline-flex;
+}
+
+.menu-option--datagame-right {
+	width: 60%;
+	display: inline-flex;
+	justify-content: flex-end;
+}
+
+.menu-option--datagame-blank {
+	display: inline-flex;
+	justify-content: center;
+}
+
 
 .menu-option--list > a:hover::before {
 	left: -450px;
 	background-size: 42px 80px;
 }
 
-.menu-option--lang {
+.menu-option--language {
 	margin: 10px 15px;
+}
+
+/* Footer */
+.menu-footer-message {
+	color: rgba(255, 255, 255, 0.623);
+	padding: 0px 5px;
+	height: 85%;
+	display: flex;
+	align-items: flex-end;
 }
