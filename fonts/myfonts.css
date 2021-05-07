@@ -35,3 +35,16 @@
 	font-style: normal;
 	font-display: swap;
 }
+
+@font-face {
+	font-family: 'Pricedown Bl';
+	src: url('Pricedown/PricedownBl-Regular.eot');
+	src: url('Pricedown/PricedownBl-Regular.eot?#iefix') format('embedded-opentype'),
+		url('Pricedown/PricedownBl-Regular.woff2') format('woff2'),
+		url('Pricedown/PricedownBl-Regular.woff') format('woff'),
+		url('Pricedown/PricedownBl-Regular.ttf') format('truetype'),
+		url('Pricedown/PricedownBl-Regular.svg#PricedownBl-Regular') format('svg');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}

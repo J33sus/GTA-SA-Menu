@@ -15,6 +15,10 @@
 						"footer footer footer";
 }
 
+.container--map {
+	grid-template-rows: 0.1fr 1fr 0.2fr;
+}
+
 /* Splash Background */
 .menu-image {
 	position: absolute;
@@ -27,11 +31,11 @@
 
 /* My CSS Grid Classes */
 .menu-header {
-    grid-area: header;
-    height: 100%;
-    display: flex;
+	grid-area: header;
+	height: 100%;
+	display: flex;
 	justify-content: center;
-    flex-direction: column;
+	flex-direction: column;
 }
 
 .menu-content {
@@ -42,14 +46,93 @@
 	grid-area: footer;
 }
 
+/* Map */
+.menu-content--map {
+	background-image: url("../images/map.png") ;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin: 0px 84px;
+	border: 4px rgb(124, 123, 123) solid;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+}
+
+.menu-map--message {
+	text-transform: uppercase;
+	font-size: 16px;
+	font-family: BankGothic;
+	bottom: 60px;
+	right: 80px;
+	position: absolute;	
+}
+
+.menu-map--legend {
+	display: flex;
+	flex: 1 0 50%;
+	margin: 40px 60px;
+	background: rgba(0, 0, 0, .7);
+}
+
+.menu-map--legend-title {
+	height: -moz-fit-content;
+	height: fit-content;
+	margin: 0px;
+	font-family: Beckett, Verdana;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 40px;
+	position: absolute;
+	margin-left: 80px;
+	margin-top: 20px;
+	text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+
+.menu-map--legend-items {
+	margin-top: 30px;
+	width: 100%;
+	display: flex;
+	list-style: none;
+	flex-direction: column;
+}
+
+.menu-map--legend-item {
+	margin-top: 6px;
+	display: flex;
+	color: rgb(172, 203, 241);
+	font-size: 20px;
+	font-family: BankGothic;
+	text-transform: uppercase;
+	text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.menu-map-legend-icon {
+	margin-right: 6px;
+	width: 24px;
+}
+
+.menu-map--city {
+	filter: blur(0.5px);
+    font-family: 'Pricedown Bl';
+	font-size: 40px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	margin-bottom: 30px;
+	margin-right: 80px;	
+	text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
+}
+
 /* Header */
 .menu-title {
+	width: -moz-fit-content;
 	width: fit-content;
 	padding-left: 3rem;
 	margin: 0;
 	font-family: Beckett, Verdana;
-    font-weight: 400;
-    font-style: normal;
+	font-weight: 400;
+	font-style: normal;
 	font-size: 4.5rem;
 	color: rgb(172, 203, 241);
 }
@@ -62,7 +145,7 @@
 	color:rgb(74, 90, 107);
 }
 
-/* Menu container and childs */
+/* Menu container */
 .menu-container {
 	margin: 0px;
 	padding: 0px;
@@ -89,6 +172,7 @@
 	justify-content: flex-start;
 }
 
+/* Menu option */
 .menu-option {
 	align-self: center;
 	margin: 15px;
@@ -101,6 +185,7 @@
 }
 
 .menu-option > a {
+	width: -moz-fit-content;
 	width: fit-content;
 	text-decoration: none;	
 	color: rgb(74, 90, 107);
@@ -142,6 +227,12 @@
 	position: absolute;
 }
 
+.menu-option--back-left {
+	position: absolute;
+	left: 100px;
+	bottom: 40px;
+}
+
 .menu-option--datagame {
 	width: 80%;
 	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
@@ -181,4 +272,8 @@
 	height: 85%;
 	display: flex;
 	align-items: flex-end;
+}
+
+.menu-disable {
+	display: none;
 }
